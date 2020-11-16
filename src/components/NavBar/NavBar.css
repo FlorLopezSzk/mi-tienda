@@ -1,0 +1,14 @@
+.navbar{
+    background-color:black;
+    padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 50px;
+    
+}
+.nav-link{
+    font-size: 20px;
+}
+.navbar-brand{
+    font-size: 25px;
+    padding: 50PX;
+}

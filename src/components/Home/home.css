@@ -1,0 +1,18 @@
+h1{ 
+	text-align: center;
+	color: black;
+	padding: -20px;
+}
+.containerHome{
+	padding-top: 50px;
+	background: #ff94b2;
+	text-align: center;
+	align-items: center;
+}
+p{
+	text-align: center;
+
+}
+.inicio{
+	background: white;
+}

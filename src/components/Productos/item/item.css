@@ -1,0 +1,25 @@
+h1{ 
+	text-align: center;
+	color: black;
+	padding: -20px;
+}
+
+p{
+	text-align: center;
+	font-size: 16px;
+}
+.imagen{
+	width: 25px; height: 190px;
+}
+.card-body{
+	width: 300px; height: 400px;
+	padding: 50px;
+
+}
+.card-titulo{
+	text-align: center;
+	font-weight: 350px;
+}
+.button{
+	padding: 30px;
+}
