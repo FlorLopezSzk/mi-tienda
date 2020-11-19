@@ -1,0 +1,24 @@
+.imagenDos{
+    align-items: center;
+    width: 500px; 
+    height: 250px;
+}
+img{
+    display:block;
+    margin:auto;
+    }
+.agregar{
+    padding-right: 50px; 
+    padding-left: 50px; 
+}
+
+.cardDetail{
+    display:block;
+    margin:auto;
+    padding-top: 0px;
+    width: 500px; 
+    height: 500px;
+}
+.precio{
+    padding-left: 50px; 
+}

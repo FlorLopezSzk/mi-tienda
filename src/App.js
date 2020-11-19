@@ -1,4 +1,6 @@
 import React from 'react';
+import {BrowserRout, Switch, Route} from  'react-router-dom';
+
 import logo from './logo.svg';
 
 import './App.css';
@@ -7,10 +9,17 @@ import './App.css';
 
 function App() {
   let mensaje = "Bienvenido a Mi Tienda ♥"
-  return (
-    <div>
-      <Home greeting={mensaje}/>
-    </div>
+  return ( 
+  <div>
+    <BrowserRout>
+      <Switch>
+        <Route exact path='/home'>
+          <Home greeting={mensaje}/>
+        </Route>
+      </Switch>
+    </BrowserRout>
+  </div>
+
   );
 }
 

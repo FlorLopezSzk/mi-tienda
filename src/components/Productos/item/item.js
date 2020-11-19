@@ -3,7 +3,7 @@ import './item.css';
 import { useState } from 'react';
 //import foto from '../imagenes/ropa1.jpg'
 import { Card, Button, CardTitle,CardImg, CardText, Row, Col } from 'reactstrap';
-const Item = (props) =>{
+const Item = () =>{
     return(
             <Card  className="card-body">
               <CardTitle className="card-titulo" tag="h5">Kimono flower</CardTitle>
