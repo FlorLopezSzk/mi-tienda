@@ -5,7 +5,7 @@ import ItemD from '../itemDetail/itemDetail.js';
 import './itemDetailContainer.css';
 
 
-import {   Card, Button, Row, Spinner } from 'reactstrap';
+import {Spinner } from 'reactstrap';
 
 
 const ItemDetailContainer = (props) =>{
@@ -28,7 +28,7 @@ const ItemDetailContainer = (props) =>{
 	})
     return(
     	<div>
-		    {item}
+		   {item}
 		</div>
         
     )

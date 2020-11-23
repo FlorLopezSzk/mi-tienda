@@ -3,9 +3,17 @@ import './home.css';
 import ItemList from '../Productos/itemList/itemList.js';
 import ItemDetailContainer from '../Productos/itemDetailContainer/itemDetailContainer.js';
 
-import { Spinner } from 'reactstrap';
+import { Spinner, Row } from 'reactstrap';
 const Home = (props) =>{
-	const spiner = <div><Spinner type="grow" color="dark" /><Spinner type="grow" color="dark" /><Spinner type="grow" color="dark" /><Spinner type="grow" color="dark" /><Spinner type="grow" color="dark" /><Spinner type="grow" color="dark" /><Spinner type="grow" color="dark" /></div>
+	const spiner = 
+	<div>
+	<Spinner type="grow" color="dark" />
+	<Spinner type="grow" color="dark" />
+	<Spinner type="grow" color="dark" />
+	<Spinner type="grow" color="dark" />
+	<Spinner type="grow" color="dark" />
+	<Spinner type="grow" color="dark" />
+	<Spinner type="grow" color="dark" /></div>
 	const[mostrar, setMostrar] = useState(spiner);
 	const listado = new Promise((resolve, reject) =>{
 		setTimeout(function(){ resolve(true); }, 2000);
@@ -16,13 +24,15 @@ const Home = (props) =>{
 	
     return(
     	<div className="container containerHome">
-		        <div className="inicio">
-		            <h1>{props.greeting}</h1>
-					</div>
-					<div>
-					{/* {mostrar} */}
+			<div className="inicio">
+				<h1>{props.greeting}</h1>
 				</div>
-				<ItemDetailContainer></ItemDetailContainer>
+				<div>
+				<ul id="lista">
+					{mostrar} 
+
+				</ul>
+			</div>
 		</div>
         
     )

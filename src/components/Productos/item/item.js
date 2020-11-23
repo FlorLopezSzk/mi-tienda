@@ -1,19 +1,29 @@
 import React from 'react';
 import './item.css';
 import { useState } from 'react';
-//import foto from '../imagenes/ropa1.jpg'
-import { Card, Button, CardTitle,CardImg, CardText, Row, Col } from 'reactstrap';
-const Item = () =>{
+import { Card, Button, CardTitle,CardImg, CardText, Row, Col, Spinner} from 'reactstrap';
+import { Link } from 'react-router-dom'
+
+import ContenedorContador from '../../Contador/Contenedor.js'
+export default function Item({productos}) {
+  
     return(
-            <Card  className="card-body">
-              <CardTitle className="card-titulo" tag="h5">Kimono flower</CardTitle>
-              <CardImg className="imagen" width="100%" src="https://http2.mlstatic.com/D_NQ_NP_2X_930662-MLA43362437724_092020-F.webp" alt="Card image cap" />
-              <p>
-              Una opción más elegante estampado de flores sobre fondo negro. Ideal para darle un toque especial a los looks.
-              </p>
-              <Button className="button"> + Agregar</Button>
-            </Card>
+          <div className="contItems">
+            {productos.map((p)=>
+                <Card key={p.id} style={{ width: '18rem', margin:'10px' }}>
+                  <Link to={`/item/{p.id}`}>
+                    <CardTitle className="card-titulo" tag="h5">
+                        {p.id}
+                    </CardTitle>
+                  </Link>
+                    
+                    <CardImg variant="top" src={p.thumbnail} />
+                    <CardText>
+                      ${p.price}
+                    </CardText>
+                    <ContenedorContador min='0' max='10'>Agregar</ContenedorContador>
+                </Card>
+              )}
+          </div>
     )
 } 
-
-export default Item;
